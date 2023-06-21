@@ -32,6 +32,12 @@ html,body{
     transform: translate(-50%,0);
 }
 
+#main p a{
+    text-decoration: none;
+    color: beige;
+    text-transform: uppercase;
+}
+
 
 #container{
     overflow-y: scroll;
