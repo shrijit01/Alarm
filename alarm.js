@@ -20,7 +20,7 @@ function showTime() {
 
     time = hour + ":" + minute + ":" + second;
     checkTime = hour + ":" + minute;
-    currentTime.innerHTML = time;
+    currentTime.innerHTML = 'Current Time: ' + time;
 }
 
 
