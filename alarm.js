@@ -41,8 +41,9 @@ function addAlarm(e) {
 // is matched with current time then show notification alarm is ringing
 function checkAlarm(li) {
     if (checkTime == li[1].innerHTML) {
-        alert('ringing');
+        alert('Alarm is ringing for : '+ li[1].innerHTML );
         clearInterval(myInterval);
+        return;
     }
 }
 
@@ -55,7 +56,7 @@ function renderAlarm(data) {
                         <button class="delete" id="${data.id}">Delete</button>
                     `
         alarmsList.appendChild(li);
-        showNotification('Alarm is added successfully ');
+        showNotification('Alarm is added successfully '+ li.childNodes[1].innerText);
         myInterval = setInterval(function () {
             checkAlarm(li.childNodes);
         }, 1000)
@@ -75,8 +76,8 @@ function deleteAlarm(e) {
 
 
 //show notification function
-function showNotification(text) {
-    alert(text);
+function showNotification(text,data) {
+    alert(text,data);
 }
 
 //selector for set alarm button
